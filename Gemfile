@@ -10,4 +10,18 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0',          group: :doc
-gem 'spring',        group: :development
+
+group :test, :development do
+  gem 'factory_girl_rails'
+  gem 'rspec-rails'
+  gem 'spring-commands-rspec'
+end
+
+group :development do
+  gem 'better_errors'
+  gem 'binding_of_caller'
+  gem 'guard-rspec'
+  gem 'pry-rails'
+  gem 'spring'
+  gem 'terminal-notifier-guard'
+end
